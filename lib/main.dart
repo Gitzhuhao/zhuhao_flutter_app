@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zhuhao_flutter_app/demo/basic_demo.dart';
 import 'package:zhuhao_flutter_app/demo/bottom_navigaion_demo.dart';
 import 'package:zhuhao_flutter_app/demo/drawer_demo.dart';
 import 'package:zhuhao_flutter_app/demo/hello_demo.dart';
@@ -27,56 +28,60 @@ class Home extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.blue[300],
-            // leading: IconButton(
-            //   icon: Icon(Icons.menu),
+        appBar: AppBar(
+          backgroundColor: Colors.blue[300],
+          // leading: IconButton(
+          //   icon: Icon(Icons.menu),
+          //   tooltip: 'navigation',
+          //   onPressed: () => debugPrint('menu test'),
+          // ),
+          title: Text(
+            '首页',
+            style: TextStyle(fontSize: 20.0, color: Colors.white),
+          ),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              tooltip: 'navigation',
+              onPressed: () => debugPrint('search test'),
+            ),
+            // IconButton(
+            //   icon: Icon(Icons.more_horiz),
             //   tooltip: 'navigation',
-            //   onPressed: () => debugPrint('menu test'),
+            //   onPressed: ()=>debugPrint('search test'),
             // ),
-            title: Text(
-              '首页',
-              style: TextStyle(fontSize: 20.0, color: Colors.white),
-            ),
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(Icons.search),
-                tooltip: 'navigation',
-                onPressed: () => debugPrint('search test'),
-              ),
-              // IconButton(
-              //   icon: Icon(Icons.more_horiz),
-              //   tooltip: 'navigation',
-              //   onPressed: ()=>debugPrint('search test'),
-              // ),
-            ],
-            elevation: 0.0,
-            bottom: TabBar(
-              unselectedLabelColor: Colors.black38,
-              indicatorColor: Colors.white,
-              indicatorSize: TabBarIndicatorSize.label,
-              indicatorWeight: 1.0,
-              tabs: <Widget>[
-                Tab(icon: Icon(Icons.local_florist)),
-                Tab(icon: Icon(Icons.change_history)),
-                Tab(icon: Icon(Icons.directions_bike)),
-              ],
-            ),
-          ),
-          drawer: DrawerDemo(),
-          body: TabBarView(
-            children: <Widget>[
-              // Icon(Icons.local_florist, size: 128.0, color: Colors.grey[200]),
-              ListViewDemo(),
-               Hello(),
-              // Icon(Icons.change_history, size: 128.0, color: Colors.grey[200]),
-              Icon(Icons.directions_bike, size: 128.0, color: Colors.grey[200]),
+          ],
+          elevation: 0.0,
+          bottom: TabBar(
+            unselectedLabelColor: Colors.black38,
+            indicatorColor: Colors.white,
+            indicatorSize: TabBarIndicatorSize.label,
+            indicatorWeight: 1.0,
+            tabs: <Widget>[
+              Tab(icon: Icon(Icons.local_florist)),
+              Tab(icon: Icon(Icons.change_history)),
+              Tab(icon: Icon(Icons.directions_bike)),
             ],
           ),
-          // body: Hello()
-          // body: ListViewDemo()
-          bottomNavigationBar: BottomNavigationDemo(),
-          ),
+        ),
+        drawer: DrawerDemo(),
+        body: TabBarView(
+          children: <Widget>[
+            // Icon(Icons.local_florist, size: 128.0, color: Colors.grey[200]),
+            // Icon(Icons.change_history, size: 128.0, color: Colors.grey[200]),
+            // Icon(Icons.directions_bike, size: 128.0, color: Colors.grey[200]),
+            ListViewDemo(),
+            BasicDemo(),
+            TextDecrationDemo(),
+            // RichTextDemo(),
+            // Hello(),
+          ],
+        ),
+        // body: Hello()
+        // body: ListViewDemo()
+        bottomNavigationBar: BottomNavigationDemo(),
+      ),
     );
   }
 }
+
