@@ -3,6 +3,7 @@ import 'package:zhuhao_flutter_app/demo/basic_demo.dart';
 import 'package:zhuhao_flutter_app/demo/bottom_navigaion_demo.dart';
 import 'package:zhuhao_flutter_app/demo/drawer_demo.dart';
 import 'package:zhuhao_flutter_app/demo/hello_demo.dart';
+import 'package:zhuhao_flutter_app/demo/layout_demo.dart';
 import './demo/listview_demo.dart';
 
 void main() => runApp(App());
@@ -26,7 +27,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue[300],
@@ -59,8 +60,9 @@ class Home extends StatelessWidget {
             indicatorWeight: 1.0,
             tabs: <Widget>[
               Tab(icon: Icon(Icons.local_florist)),
-              Tab(icon: Icon(Icons.change_history)),
+              Tab(icon: Icon(Icons.directions_bus)),
               Tab(icon: Icon(Icons.directions_bike)),
+              Tab(icon: Icon(Icons.directions_boat)),
             ],
           ),
         ),
@@ -73,6 +75,7 @@ class Home extends StatelessWidget {
             ListViewDemo(),
             BasicDemo(),
             TextDecrationDemo(),
+            LayoutDemo(),
             // RichTextDemo(),
             // Hello(),
           ],
@@ -84,4 +87,5 @@ class Home extends StatelessWidget {
     );
   }
 }
+
 
