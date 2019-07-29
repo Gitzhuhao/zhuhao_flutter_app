@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zhuhao_flutter_app/demo/hello_demo.dart';
 import './demo/listview_demo.dart';
 
 void main() => runApp(App());
@@ -26,7 +27,7 @@ class Home extends StatelessWidget {
         ),
         elevation: 0.0,
       ),
-      body: ListViewDemo()
+      body: Hello()
       // body: ListViewDemo()
       // body: ListViewDemo()
     );
