@@ -4,6 +4,7 @@ import 'package:zhuhao_flutter_app/demo/bottom_navigaion_demo.dart';
 import 'package:zhuhao_flutter_app/demo/drawer_demo.dart';
 import 'package:zhuhao_flutter_app/demo/hello_demo.dart';
 import 'package:zhuhao_flutter_app/demo/layout_demo.dart';
+import 'package:zhuhao_flutter_app/demo/view.dart';
 import './demo/listview_demo.dart';
 
 void main() => runApp(App());
@@ -75,9 +76,10 @@ class Home extends StatelessWidget {
             ListViewDemo(),
             BasicDemo(),
             TextDecrationDemo(),
-            LayoutDemo(),
+            // LayoutDemo(),
             // RichTextDemo(),
             // Hello(),
+            ViewDemo(),
           ],
         ),
         // body: Hello()
@@ -87,5 +89,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
-
