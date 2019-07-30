@@ -8,6 +8,64 @@ class LayoutDemo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+          // StackDemo(),
+          // AspectRatioDemo(),
+          ConstrainedBox(
+            constraints: BoxConstraints(maxWidth: 200.0, maxHeight: 200.0),
+            child: Container(
+              color: Colors.blue,
+              child: Icon(Icons.pool, size: 30.0, color: Colors.white),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class IconBadge extends StatelessWidget {
+  final IconData icon;
+  final double size;
+  IconBadge(this.icon, {this.size = 30});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Icon(icon, size: size, color: Colors.white),
+      width: 30.0 + size,
+      height: 30.0 + size,
+      color: Colors.blue,
+    );
+  }
+}
+
+class AspectRatioDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          AspectRatio(
+            aspectRatio: 4.0 / 3.0,
+            child: Container(
+              color: Colors.blue,
+              child: Icon(Icons.pool, size: 30.0, color: Colors.white),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class StackDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
           Stack(
             alignment: Alignment.topCenter,
             children: <Widget>[
@@ -21,7 +79,8 @@ class LayoutDemo extends StatelessWidget {
                     color: Colors.grey,
                     borderRadius: BorderRadius.circular(8.0),
                   ),
-                  child: Icon(Icons.pool, size: 30.0),
+                  child: Icon(Icons.pool,
+                      size: 30.0, color: Color.fromRGBO(255, 255, 255, 1.0)),
                 ),
               ),
               Positioned(
@@ -49,21 +108,6 @@ class LayoutDemo extends StatelessWidget {
           )
         ],
       ),
-    );
-  }
-}
-
-class IconBadge extends StatelessWidget {
-  final IconData icon;
-  final double size;
-  IconBadge(this.icon, {this.size = 30});
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Icon(icon, size: size, color: Colors.white),
-      width: 30.0 + size,
-      height: 30.0 + size,
-      color: Colors.blue,
     );
   }
 }
