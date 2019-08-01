@@ -6,6 +6,7 @@ import 'package:zhuhao_flutter_app/demo/bottom_navigaion_demo.dart';
 import 'package:zhuhao_flutter_app/demo/drawer_demo.dart';
 import 'package:zhuhao_flutter_app/demo/hello_demo.dart';
 import 'package:zhuhao_flutter_app/demo/layout_demo.dart';
+import 'package:zhuhao_flutter_app/demo/navigation_demo.dart';
 import 'package:zhuhao_flutter_app/demo/sliver_demo.dart';
 import 'package:zhuhao_flutter_app/demo/view.dart';
 import './demo/listview_demo.dart';
@@ -19,7 +20,14 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //debug显示
       // home: SliverDemo(),
-      home: Home(),
+      // home: Home(),
+      // home: NavigationDemo(),
+      routes: {
+        'myHomeScreen': (context) => Home(),
+        'homeScreen': (context) => NavigationDemo(),
+        'aboutScreen': (context) => About(title: 'About'),
+      },
+      initialRoute: 'myHomeScreen',
       theme: ThemeData(
           primarySwatch: Colors.blue,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
