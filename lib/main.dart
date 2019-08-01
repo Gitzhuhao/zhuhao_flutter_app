@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:zhuhao_flutter_app/demo/AccountManage.dart';
+import 'package:zhuhao_flutter_app/demo/AcountDetail.dart';
 import 'package:zhuhao_flutter_app/demo/basic_demo.dart';
 import 'package:zhuhao_flutter_app/demo/bottom_navigaion_demo.dart';
 import 'package:zhuhao_flutter_app/demo/drawer_demo.dart';
 import 'package:zhuhao_flutter_app/demo/hello_demo.dart';
 import 'package:zhuhao_flutter_app/demo/layout_demo.dart';
+import 'package:zhuhao_flutter_app/demo/sliver_demo.dart';
 import 'package:zhuhao_flutter_app/demo/view.dart';
 import './demo/listview_demo.dart';
 
@@ -15,6 +18,7 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false, //debug显示
+      // home: SliverDemo(),
       home: Home(),
       theme: ThemeData(
           primarySwatch: Colors.blue,
@@ -79,7 +83,10 @@ class Home extends StatelessWidget {
             // LayoutDemo(),
             // RichTextDemo(),
             // Hello(),
-            ViewDemo(),
+            // ViewDemo(),
+            SliverDemo(),
+            // AccountMangae(),
+            // AcountDetail(),
           ],
         ),
         // body: Hello()

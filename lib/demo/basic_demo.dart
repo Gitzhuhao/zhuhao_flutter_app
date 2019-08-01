@@ -53,7 +53,9 @@ class TextDecrationDemo extends StatelessWidget {
               colorFilter: ColorFilter.mode(
                 Colors.indigoAccent[400].withOpacity(0.2),
                 BlendMode.hardLight
-              ))),
+              )
+              )
+              ),
       // color: Colors.grey[300],
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
