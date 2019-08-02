@@ -4,6 +4,7 @@ import 'package:zhuhao_flutter_app/demo/AcountDetail.dart';
 import 'package:zhuhao_flutter_app/demo/basic_demo.dart';
 import 'package:zhuhao_flutter_app/demo/bottom_navigaion_demo.dart';
 import 'package:zhuhao_flutter_app/demo/drawer_demo.dart';
+import 'package:zhuhao_flutter_app/demo/form_demo.dart';
 import 'package:zhuhao_flutter_app/demo/hello_demo.dart';
 import 'package:zhuhao_flutter_app/demo/layout_demo.dart';
 import 'package:zhuhao_flutter_app/demo/navigation_demo.dart';
@@ -26,12 +27,15 @@ class App extends StatelessWidget {
         'myHomeScreen': (context) => Home(),
         'homeScreen': (context) => NavigationDemo(),
         'aboutScreen': (context) => About(title: 'About'),
+        'FormDemo': (context) => FormDemo(),
       },
-      initialRoute: 'myHomeScreen',
+      initialRoute: 'FormDemo',
       theme: ThemeData(
           primarySwatch: Colors.blue,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
-          splashColor: Colors.white12),
+          splashColor: Colors.white12,
+          accentColor: Colors.orange,
+          ),
     );
   }
 }
