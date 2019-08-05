@@ -47,7 +47,7 @@ class TextDecrationDemo extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: NetworkImage('https://resources.ninghao.org/images/the-old-fashioned.png'),
+              image: NetworkImage('https://resources.ninghao.net/images/the-old-fashioned.png'),
               alignment: Alignment.topCenter,
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(

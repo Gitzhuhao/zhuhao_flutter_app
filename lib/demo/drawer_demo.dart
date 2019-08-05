@@ -16,7 +16,7 @@ class DrawerDemo extends StatelessWidget {
           UserAccountsDrawerHeader(
             currentAccountPicture: CircleAvatar(
               backgroundImage: NetworkImage(
-                  'https://profile.csdnimg.cn/1/E/2/1_zh1053935924'),
+                  'https://resources.ninghao.net/images/space-skull.jpg'),
             ),
             accountName: Text('猪猪侠',
                 style: TextStyle(
@@ -27,7 +27,7 @@ class DrawerDemo extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                   image: NetworkImage(
-                      'https://resources.ninghao.org/images/dragon.jpg'),
+                      'https://resources.ninghao.net/images/dragon.jpg'),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
                       Colors.blue[400].withOpacity(0.5), BlendMode.srcOver)),

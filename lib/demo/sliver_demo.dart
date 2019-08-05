@@ -22,7 +22,7 @@ class SliverDemo extends StatelessWidget {
                     letterSpacing: 3.0,
                     fontWeight: FontWeight.w300),
               ),
-              background: Image.network('https://resources.ninghao.org/images/free_hugs.jpg',fit: BoxFit.cover,),
+              background: Image.network('https://resources.ninghao.net/images/free_hugs.jpg',fit: BoxFit.cover,),
             ),
           ),
           SliverSafeArea(

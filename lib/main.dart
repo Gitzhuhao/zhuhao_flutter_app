@@ -7,6 +7,7 @@ import 'package:zhuhao_flutter_app/demo/drawer_demo.dart';
 import 'package:zhuhao_flutter_app/demo/form_demo.dart';
 import 'package:zhuhao_flutter_app/demo/hello_demo.dart';
 import 'package:zhuhao_flutter_app/demo/layout_demo.dart';
+import 'package:zhuhao_flutter_app/demo/material_component.dart';
 import 'package:zhuhao_flutter_app/demo/navigation_demo.dart';
 import 'package:zhuhao_flutter_app/demo/sliver_demo.dart';
 import 'package:zhuhao_flutter_app/demo/view.dart';
@@ -28,14 +29,15 @@ class App extends StatelessWidget {
         'homeScreen': (context) => NavigationDemo(),
         'aboutScreen': (context) => About(title: 'About'),
         'FormDemo': (context) => FormDemo(),
+        'MaterialComponentDemo': (context) => MaterialComponentDemo(),
       },
-      initialRoute: 'FormDemo',
+      initialRoute: 'myHomeScreen',
       theme: ThemeData(
-          primarySwatch: Colors.blue,
-          highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
-          splashColor: Colors.white12,
-          accentColor: Colors.orange,
-          ),
+        primarySwatch: Colors.blue,
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+        splashColor: Colors.white12,
+        accentColor: Colors.green,
+      ),
     );
   }
 }
@@ -92,11 +94,11 @@ class Home extends StatelessWidget {
             ListViewDemo(),
             BasicDemo(),
             TextDecrationDemo(),
+            SliverDemo(),
             // LayoutDemo(),
             // RichTextDemo(),
             // Hello(),
             // ViewDemo(),
-            SliverDemo(),
             // AccountMangae(),
             // AcountDetail(),
           ],
